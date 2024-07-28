@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Data Narrative Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        svg {
+            border: 1px solid #ddd;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            padding: 5px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            pointer-events: none;
+        }
+        .x-axis path,
+        .y-axis path {
+            shape-rendering: crispEdges;
+        }
+        .x-axis text,
+        .y-axis text {
+            font-size: 12px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .button-container {
+            margin-top: 10px;
+        }
+        .zoom-button {
+            margin: 5px;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>COVID-19 Data Visualization</h1>
+
+    <div class="section" id="intro">
+        <h2>Introduction</h2>
+        <p>This visualization illustrates the relationship between COVID-19 infection rates and vaccination rates across different regions. The narrative starts with a focused look at how vaccination rates impact infection rates, and then allows users to explore various regions and their data in detail.</p>
+    </div>
+
+    <div class="section" id="plot">
+        <h2>Data Plot</h2>
+        <p>The plot below shows infection rates on the x-axis and vaccination rates on the y-axis. Each dot represents a region. Hover over a dot to see detailed information about that region. This section represents the narrow stem of the martini glass, delivering a focused message.</p>
+        <svg id="chart" width="600" height="400"></svg>
+    </div>
+
+    <div class="button-container">
+        <button class="zoom-button" id="zoomIn">Zoom In</button>
+        <button class="zoom-button" id="zoomOut">Zoom Out</button>
+    </div>
+
+    <div class="section" id="explore">
+        <h2>Explore the Data</h2>
+        <p>After viewing the initial plot, you can interact with the visualization to explore different aspects of the data. Use the tools provided to filter and zoom in on specific regions to see more detailed information.</p>
+    </div>
+
+    <div class="section" id="conclusion">
+        <h2>Conclusion</h2>
+        <p>By examining the plot and interacting with the data, you can gain insights into the impact of vaccination on controlling COVID-19 infection rates. This section allows for exploration beyond the initial message, letting users delve deeper into the data.</p>
+    </div>
+
+    <div id="tooltip" class="tooltip" style="opacity: 0;"></div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

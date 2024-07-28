@@ -1,0 +1,15 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+svg {
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ddd;
+}
